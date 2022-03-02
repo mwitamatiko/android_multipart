@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Upload Files"
+        app:titleCentered="true" />
+
+    <TextView
+        android:id="@+id/front_id_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:padding="8dp"
+        android:text="1. National ID Front"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/front_capture_id_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_toolbar" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/front_capture_id_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:backgroundTint="@color/button_color"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        android:textAllCaps="false"
+        app:icon="@drawable/camera_icon"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="30sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/front_id_text"
+        app:layout_constraintTop_toBottomOf="@+id/main_toolbar" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/front_pick_id_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/button_color"
+        android:layout_marginTop="7dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        android:textAllCaps="false"
+        app:icon="@drawable/upload_icon"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/front_capture_id_btn"
+        app:layout_constraintTop_toBottomOf="@+id/main_toolbar" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/front_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/front_id_text" />
+
+    <ImageView
+        android:id="@+id/front_id_image"
+        android:layout_width="464dp"
+        android:layout_height="149dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="33dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/noimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/front_divider" />
+
+    <TextView
+        android:id="@+id/back_id_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:text="2. National ID Back"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/back_capture_id_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/front_id_image" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_capture_id_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/button_color"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        android:textAllCaps="false"
+        app:icon="@drawable/camera_icon"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="30sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/back_id_text"
+        app:layout_constraintTop_toBottomOf="@+id/front_id_image" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_pick_id_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:insetLeft="0dp"
+        android:backgroundTint="@color/button_color"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        android:textAllCaps="false"
+        app:icon="@drawable/upload_icon"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/back_capture_id_btn"
+        app:layout_constraintTop_toBottomOf="@+id/front_id_image" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/back_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/back_capture_id_btn"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="327dp" />
+    <ImageView
+        android:id="@+id/back_id_image"
+        android:layout_width="464dp"
+        android:layout_height="149dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="33dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/noimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_divider" />
+
+    <TextView
+        android:id="@+id/passport_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:text="3. Passport Image   "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/capture_passport_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_id_image" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/capture_passport_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/button_color"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        android:textAllCaps="false"
+        app:icon="@drawable/camera_icon"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="30sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/passport_text"
+        app:layout_constraintTop_toBottomOf="@+id/back_id_image" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/pick_passport_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/button_color"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        android:textAllCaps="false"
+        app:icon="@drawable/upload_icon"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/capture_passport_btn"
+        app:layout_constraintTop_toBottomOf="@+id/back_id_image" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/passport_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="543dp"
+        app:layout_constraintTop_toBottomOf="@+id/capture_passport_btn"/>
+
+    <ImageView
+        android:id="@+id/passport_image"
+        android:layout_width="464dp"
+        android:layout_height="149dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="33dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/noimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passport_divider" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/upload_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/button_color"
+        android:padding="20dp"
+        android:text="Upload Images"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passport_image"
+        app:layout_constraintVertical_bias="0.694" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
